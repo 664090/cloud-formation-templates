@@ -429,7 +429,7 @@
           },
           "deploySite": {
             "sources": {
-              "c:\\inetpub\\contoso": {
+              "c:\\inetpub\\site": {
                 "Fn::Join": [
                   "",
                   [
@@ -497,7 +497,7 @@
                   "Add-WindowsFeature Web-Mgmt-Tools -includeAllSubFeature -logpath $env:temp\\Web-Mgmt-Tools_feature.log \n",
                   
                   "remove-website -name \"Default Web Site\" \n",
-                  "new-website -name contoso -port 80 -physicalpath c:\\inetpub\\contoso -ApplicationPool \".NET v4.5\" -force \n",
+                  "new-website -name site -port 80 -physicalpath c:\\inetpub\\site -ApplicationPool \".NET v4.5\" -force \n",
                 "</powershell>\n",
                 "<script>\n",
                 "cfn-init.exe -v -c setup -s ",
